@@ -3,7 +3,14 @@
 //Haz varios ejemplos y compruebalos.
 
 //Sugerencia de función:
-function findArrayIndex(array, text) {}
+function findArrayIndex(array, text) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === text) {
+      return i
+    }
+  }
+  return -1
+}
 
 //Ej array:
 const mainCharacters = [
@@ -15,3 +22,13 @@ const mainCharacters = [
   'Anakin',
   'Obi-Wan'
 ]
+
+console.log(findArrayIndex(mainCharacters, 'Leia'))
+console.log(findArrayIndex(mainCharacters, 'Rey'))
+console.log(findArrayIndex(mainCharacters, 'Peter'))
+
+function findArrayIndex(array, texto) {
+  return array.indexOf(texto)
+}
+
+console.log(findArrayIndex(mainCharacters, 'Leia'))
